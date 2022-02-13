@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eulers Method</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src='https://cdn.plot.ly/plotly-2.9.0.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/expr-eval/2.0.1/bundle.js"></script>
+    <script src="script.js"></script>
+</head>
+<body onload="main()"">
+    <div class="content-wrapper">
+        <div class="graph-inputs-wrapper">
+            <div id="graph"></div>
+            <div class="input-wrapper">
+                <div class="rawr">dy/dx: </div>
+                <input id="exp" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="input-wrapper">
+                <div class="rawr">x0: </div>
+                <input id="x0" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="input-wrapper">
+                <div class="rawr">x1: </div>
+                <input id="x1" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="input-wrapper">
+                <div class="rawr">y(0): </div>
+                <input id="y0" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="input-wrapper">
+                <div class="rawr">dx: </div>
+                <input id="dx" type="text" spellcheck="false" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="approx-button-wrapper">
+                <button class="approx-button" onclick="solve()">Approximate</button>
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table id="sol-table" >
+                <tr>
+                    <td>n</td>
+                    <td>x(n)</td>
+                    <td>y(n)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html
